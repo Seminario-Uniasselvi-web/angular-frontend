@@ -1,1 +1,22 @@
-<p>card works!</p>
+<p-card
+  header="Mobi"
+  subheader="R$ 70.000,00"
+  [style]="{ 'max-width': '360px' }"
+>
+  <ng-template pTemplate="header">
+    <img
+      alt="Card"
+      src="https://quatrorodas.abril.com.br/wp-content/uploads/2024/02/FiatMobiLikeMY245.jpg?quality=70&strip=info"
+    />
+  </ng-template>
+  <div class="flex justify-content-between">
+    <p>KM: 20.000</p>
+    <p>Placa: ABC1234</p>
+  </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit maiores qui unde illum, quos repudimo vel facere.</p>
+  <ng-template pTemplate="footer">
+    <div>
+      <p-button label="Falar com vendedor" class="w-full" styleClass="w-full" />
+    </div>
+  </ng-template>
+</p-card>

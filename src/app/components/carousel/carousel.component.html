@@ -1,1 +1,33 @@
-<p>carousel works!</p>
+<div class="container-card m-auto">
+  <p-carousel 
+      [value]="products" 
+      [numVisible]="1" 
+      [numScroll]="3" 
+      [circular]="true" 
+      [responsiveOptions]="responsiveOptions">
+          <ng-template let-product pTemplate="item">
+              <div class="border-1 surface-border border-round m-2 p-3">
+                  <div class="mb-3">
+                      <div class="relative mx-auto">
+                          <img 
+                              src="https://quatrorodas.abril.com.br/wp-content/uploads/2024/02/FiatMobiLikeMY245.jpg?quality=70&strip=info" 
+                              [alt]="product.name" 
+                              class="w-full border-round" />
+                          
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      Fiat Mobi
+                  </div>
+                  <div class="flex justify-content-between align-items-center">
+                  <div class="mt-0 font-semibold text-xl">
+                      {{ 'R$ ' + product.price + '.00000,00'}}
+                  </div>
+                      <span>
+                        <p-button label="Falar com vendedor" class="w-full" styleClass="w-full" />
+                      </span>
+                  </div>
+              </div>
+          </ng-template>
+  </p-carousel>
+</div>
