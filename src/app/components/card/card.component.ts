@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { Vehicle } from '../../../interfaces/Vehicle';
 
 @Component({
   selector: 'app-card',
@@ -9,4 +10,6 @@ import { CardModule } from 'primeng/card';
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
 })
-export class CardComponent {}
+export class CardComponent {
+  @Input() vehicles!: Vehicle[]
+}

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { VehicleService } from '../../services/vehicle.service';
 import { TagModule } from 'primeng/tag';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
+import { Vehicle } from '../../../interfaces/Vehicle';
 
 @Component({
   selector: 'app-carousel',
@@ -12,15 +13,11 @@ import { CarouselModule } from 'primeng/carousel';
   styleUrl: './carousel.component.scss'
 })
 export class CarouselComponent {
-  products: any[] = []
+
+  @Input() vehicles!: Vehicle[]
+
 
   responsiveOptions: any[] | undefined;
 
-  constructor(private _vehicleService: VehicleService) {}
 
-  ngOnInit() {
-    this.products = this._vehicleService.getVehicles()  
-      
-
-  }
 }

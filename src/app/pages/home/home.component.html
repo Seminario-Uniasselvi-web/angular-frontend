@@ -1,17 +1,11 @@
 <app-header></app-header>
 
-<app-carousel></app-carousel>
+<app-carousel [vehicles]="vehicles"></app-carousel>
 
 <h2 class="pl-3">Estoque de Seminovos</h2>
 
 <div class="flex flex-wrap gap-4 justify-content-center">
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+  <app-card [vehicles]="vehicles"></app-card>
 </div>
 
 <app-footer></app-footer>
