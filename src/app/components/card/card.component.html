@@ -1,22 +1,22 @@
 <div class="flex flex-wrap gap-3 justify-content-center">
   @for (vehicle of vehicles; track $index) {
     <p-card
-    [header]="vehicle.marca"
-    [subheader]="'R$ '+ vehicle.valor"
+    [header]="vehicle.brand"
+    [subheader]="'R$ '+ vehicle.value"
     [style]="{ 'max-width': '360px' }"
   >
     <ng-template pTemplate="header">
       <img
         class="h-14rem"
         alt="Card"
-        [src]="vehicle.imagem"
+        [src]="vehicle.imageUrl"
       />
     </ng-template>
     <div class="flex justify-content-between">
-      <p>KM: {{vehicle.km}}</p>
-      <p>Placa: {{vehicle.placa}}</p>
+      <p>KM: {{vehicle.kilometers}}</p>
+      <p>Placa: {{vehicle.registrationPlate}}</p>
     </div>
-      <p>{{vehicle.descricao.substring(0, 150) + '...' }}</p>
+      <p>{{vehicle.description.substring(0, 150) + '...' }}</p>
     <ng-template pTemplate="footer">
       <div>
         <p-button label="Falar com vendedor" class="w-full" styleClass="w-full" />

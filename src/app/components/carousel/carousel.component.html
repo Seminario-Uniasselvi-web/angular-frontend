@@ -10,18 +10,18 @@
                   <div class="mb-3">
                       <div class="relative mx-auto">
                           <img
-                              [src]="vehicle.imagem"
-                              [alt]="vehicle.marca"
+                              [src]="vehicle.imageUrl"
+                              [alt]="vehicle.brand"
                               class="w-full h-27rem border-round" />
 
                       </div>
                   </div>
                   <div class="mb-3">
-                      {{vehicle.marca}}
+                      {{vehicle.brand}}
                   </div>
                   <div class="flex justify-content-between align-items-center">
                   <div class="mt-0 font-semibold text-xl">
-                      {{ 'R$ ' + vehicle.valor}}
+                      {{ 'R$ ' + vehicle.value}}
                   </div>
                       <span>
                         <p-button label="Falar com vendedor" class="w-full" styleClass="w-full" />
