@@ -1,10 +1,10 @@
 export interface Vehicle {
   id: number,
-  marca: string,
-  placa: string,
-  valor: number
-  cor: string,
-  descricao: string,
-  km: number,
-  imagem: string
+  brand: string,
+  registrationPlate: string,
+  value: number
+  color: string,
+  description: string,
+  kilometers: number,
+  imageUrl: string
 }
